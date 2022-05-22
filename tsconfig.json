@@ -14,11 +14,27 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": "/",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "pages/_app.js",
+    "pages/_document.js",
+    "pages/index.js",
+    "src/pages/ItemList.js",
+    "src/components/layout/Fnb.js",
+    "src/components/layout/Footer.js",
+    "src/components/layout/Header.js",
+    "src/components/layout/Gnb.js",
+    "src/components/layout/Lnb.js",
+    "src/components/layout/Snb.js",
+    "src/pages/ItemList.js",
+    "src/pages/ItemList.js"
+  ],
   "exclude": ["node_modules"]
 }
