@@ -20,7 +20,7 @@ export default function ItemList({ list }) {
                   src={`http://ddragon.leagueoflegends.com/cdn/12.9.1/img/champion/${list[keyItem].image.full}`}
                   alt={list[keyItem].name}
                 />
-                <p>{list[keyItem].name}</p>
+                <p>{list[keyItem].name}잔디심기 테스트</p>
               </a>
             </Link>
           </Grid>
