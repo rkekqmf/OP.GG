@@ -160,7 +160,7 @@ const Wave1 = styled.div`
   left: 0;
   width: 100%;
   height: 100px;
-  background: url(파도.png);
+  background: url(wave.png);
   background-size: 1000px 100px;
   z-index: 1000;
   opacity: 1;

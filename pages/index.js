@@ -1,32 +1,34 @@
+import Link from "next/link";
 import Lottie from "react-lottie-player";
 import styled from "styled-components";
 import lottieJson from "/public/animation.json";
-export default function Home({ posts }) {
+
+export default function Home() {
   return (
     <Container>
       <Content>
-        <h1>Welcome to My Blog</h1>
-        <ul>
-          {posts.map((post) => (
-            <li key={post.id}>{post.title}</li>
-          ))}
-        </ul>
-        <span>프로젝트 보러가기</span>
+        <h1>안녕하세요</h1>
+        <h1>포트폴리오입니다</h1>
+        <Link href="/projects">
+          <a>
+            <span>프로젝트 보러가기</span>
+          </a>
+        </Link>
       </Content>
       <Lottie
         loop
         animationData={lottieJson}
         play
-        style={{ width: 500, height: 500 }}
+        style={{ width: 480, height: 480 }}
       />
     </Container>
   );
 }
 
-const Container = styled.div`
+const Container = styled.main`
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
 `;
 
 const Content = styled.div`
@@ -46,15 +48,43 @@ const Content = styled.div`
 //   };
 // };
 
-export const getStaticProps = async () => {
-  const res = await fetch(
-    "https://jsonplaceholder.typicode.com/posts?_start=0&_end=10"
-  );
-  const posts = await res.json();
+// export const getStaticProps = async () => {
+//   try {
+//     const options = {
+//       method: "POST",
+//       url: `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
+//       headers: {
+//         Accept: "application/json",
+//         "Notion-Version": "2022-02-22",
+//         "Content-Type": "application/json",
+//         Authorization: `Bearer ${TOKEN}`,
+//       },
+//       data: { page_size: 100 },
+//     };
 
-  return {
-    props: {
-      posts,
-    },
-  };
-};
+//     const response = await axios.request(options);
+
+//     return {
+//       props: {
+//         projects: response.data,
+//       },
+//     };
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
+
+// export const getStaticProps = async () => {
+//   try {
+//     const response = await axios.get(
+//       "https://jsonplaceholder.typicode.com/posts?_start=0&_end=10"
+//     );
+//     return {
+//       props: {
+//         posts: response.data,
+//       },
+//     };
+//   } catch (err) {
+//     console.log(err);
+//   }
+// };
