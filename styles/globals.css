@@ -1,20 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Jua:400");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jua", sans-serif;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #333;
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  color: #fff;
+}
+
+#__next {
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 350px;
+}
+ul {
+  list-style: none;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-ul {
-  list-style: none;
 }
