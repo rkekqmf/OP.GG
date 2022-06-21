@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Jua:400");
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyle = createGlobalStyle`
 
 * {
   margin: 0;
@@ -9,11 +11,12 @@
 
 html,
 body {
-  background: #333;
+  background: ${({ theme }) => theme.bgColor};
   display: flex;
   width: 100vw;
   min-height: 100vh;
-  color: #fff;
+  color: ${({ theme }) => theme.fontColor};
+  transition: 0.5s;
 }
 
 #__next {
@@ -28,4 +31,6 @@ ul {
 a {
   color: inherit;
   text-decoration: none;
-}
+}`;
+
+export default GlobalStyle;

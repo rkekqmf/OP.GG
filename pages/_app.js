@@ -1,14 +1,27 @@
 import Layout from "../components/Layout";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import "../styles/globals.css";
 config.autoAddCss = false;
+import GlobalStyle from "../styles/GlobalStyle";
+import { ThemeProvider } from "styled-components";
+import { darkTheme, lightTheme } from "../styles/theme";
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }) {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const toggleDarkMode = () => {
+    setIsDarkMode((prev) => !prev);
+  };
+
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
+        <GlobalStyle />
+        <Layout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
+    </>
   );
 }
 
