@@ -120,7 +120,7 @@ const Container = styled.div`
 const ImageBox = styled.div`
   position: relative;
   width: 100%;
-  height: 200px;
+  max-height: 200px;
 `;
 
 const Content = styled.div`
