@@ -1,6 +1,11 @@
 import Image from "next/image";
+<<<<<<< HEAD
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
+=======
+import React from "react";
+import styled from "styled-components";
+>>>>>>> 43b04657238185c51422e0052288e14cab260eaa
 import SvgController from "./SvgController";
 
 const TAG_BACKGROUND = {
@@ -14,9 +19,14 @@ const TAG_BACKGROUND = {
   "Riot API": "#D32936",
 };
 
+<<<<<<< HEAD
 const ProjectsItem = ({ project }) => {
   const themeContext = useContext(ThemeContext);
 
+=======
+const ProjectsItem = ({ theme, project }) => {
+  console.log(theme);
+>>>>>>> 43b04657238185c51422e0052288e14cab260eaa
   const projectCover = project.cover.external.url;
   const projectTitle = project.properties.name.title[0].plain_text;
   const projectIcon = project.icon.emoji;
@@ -71,6 +81,7 @@ const ProjectsItem = ({ project }) => {
           </Text>
         ))}
         <Text />
+<<<<<<< HEAD
         <div>
           <Text
             as="a"
@@ -102,6 +113,39 @@ const ProjectsItem = ({ project }) => {
             />
           </Text>
         </div>
+=======
+        <Text
+          as="a"
+          href={projectGithub}
+          target="_blank"
+          display="inline-block"
+          margin={10}
+          fontSize={1.2}
+          cursor="pointer"
+        >
+          <SvgController
+            name="github"
+            width={30}
+            height={30}
+            fill={theme.fontColor}
+          />
+        </Text>
+        <Text
+          as="a"
+          href={projectUrl}
+          target="_blank"
+          fontSize={1.2}
+          display="inline-block"
+          cursor="pointer"
+        >
+          <SvgController
+            name="notion"
+            width={30}
+            height={30}
+            fill={theme.fontColor}
+          />
+        </Text>
+>>>>>>> 43b04657238185c51422e0052288e14cab260eaa
       </Content>
     </Container>
   );
@@ -120,17 +164,24 @@ const Container = styled.div`
 const ImageBox = styled.div`
   position: relative;
   width: 100%;
+<<<<<<< HEAD
   max-height: 200px;
+=======
+  height: 200px;
+>>>>>>> 43b04657238185c51422e0052288e14cab260eaa
 `;
 
 const Content = styled.div`
   padding: 15px 10px;
+<<<<<<< HEAD
   div {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
   }
+=======
+>>>>>>> 43b04657238185c51422e0052288e14cab260eaa
 `;
 
 const Text = styled.p`
