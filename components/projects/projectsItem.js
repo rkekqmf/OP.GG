@@ -42,6 +42,7 @@ const ProjectsItem = ({ project }) => {
   return (
     <Container>
       <ImageBox>
+        <span>이미지 왜안나와</span>
         <Image
           src={projectCover}
           layout="fill"
