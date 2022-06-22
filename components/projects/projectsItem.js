@@ -42,7 +42,6 @@ const ProjectsItem = ({ project }) => {
   return (
     <Container>
       <ImageBox>
-        <span>이미지 왜안나와</span>
         <Image
           src={projectCover}
           layout="fill"
@@ -121,7 +120,7 @@ const Container = styled.div`
 const ImageBox = styled.div`
   position: relative;
   width: 100%;
-  max-height: 200px;
+  height: 200px;
 `;
 
 const Content = styled.div`
