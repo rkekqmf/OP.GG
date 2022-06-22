@@ -3,15 +3,16 @@ import styled from "styled-components";
 import ProjectsItem from "../components/projects/ProjectsItem";
 import { DATABASE_ID, TOKEN } from "../config";
 
-const projects = ({ projects }) => {
+const projects = ({ theme, projects }) => {
   return (
     <Container>
       <div>
-        <h1>프로젝트 총 : {projects.length}</h1>
+        <h1>프로젝트</h1>
+        <span>(총 : {projects.length}개)</span>
       </div>
       <ProjectsList>
         {projects.map((project) => (
-          <ProjectsItem key={project.id} project={project} />
+          <ProjectsItem key={project.id} theme={theme} project={project} />
         ))}
       </ProjectsList>
     </Container>
@@ -25,6 +26,9 @@ const Container = styled.main`
   flex-direction: column;
   margin-top: 25px;
   row-gap: 25px;
+  h1 {
+    display: inline-block;
+  }
 `;
 
 const ProjectsList = styled.div`
@@ -49,7 +53,7 @@ export const getServerSideProps = async () => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${TOKEN}`,
       },
-      data: { sorts: [{ property: "name", direction: "ascending" }] },
+      data: { sorts: [{ property: "period", direction: "ascending" }] },
     };
 
     const response = await axios.request(options);
