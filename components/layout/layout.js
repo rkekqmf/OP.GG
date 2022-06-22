@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled, { css } from "styled-components";
-import Footer from "./Footer";
-import HeadInfo from "./HeadInfo";
+import Footer from "./footer";
+import HeadInfo from "./headInfo";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 const Layout = ({ toggleDarkMode, children }) => {

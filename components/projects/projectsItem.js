@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
-import SvgController from "./SvgController";
+import SvgController from "./svgController";
 
 const TAG_BACKGROUND = {
   React: "#61DAFB",
