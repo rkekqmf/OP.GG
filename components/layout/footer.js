@@ -27,6 +27,20 @@ const Footer = () => {
           </Link>
         </li>
         <li>
+          <Link href={"/resume"}>
+            <a>
+              <span>이력서</span>
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href={"/coverLetter"}>
+            <a>
+              <span>자기소개서</span>
+            </a>
+          </Link>
+        </li>
+        <li>
           <Link href={"/projects"}>
             <a>
               <span>프로젝트</span>

@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["via.placeholder.com"],
+    domains: ["www.notion.so", "images.unsplash.com"],
   },
 };
 

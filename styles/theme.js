@@ -13,6 +13,7 @@ const pallete = {
 export const darkTheme = {
   bgColor: "#333",
   fontColor: "#fff",
+  shadowColor: "#282828",
   pallete,
   size,
 };
@@ -20,6 +21,7 @@ export const darkTheme = {
 export const lightTheme = {
   bgColor: "#fff",
   fontColor: "#333",
+  shadowColor: "#e8e8e8",
   pallete,
   size,
 };
