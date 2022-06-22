@@ -10,7 +10,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
 const Footer = () => {
-  const icon = "faGithub";
   return (
     <Container>
       <div>

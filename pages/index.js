@@ -1,7 +1,7 @@
 import Link from "next/link";
-import Lottie from "react-lottie-player";
+
 import styled from "styled-components";
-import lottieJson from "/public/animation.json";
+import Animation from "../components/home/animation";
 
 export default function Home() {
   return (
@@ -15,12 +15,7 @@ export default function Home() {
           </a>
         </Link>
       </Content>
-      <Lottie
-        loop
-        animationData={lottieJson}
-        play
-        style={{ width: 480, height: 480 }}
-      />
+      <Animation />
     </Container>
   );
 }
