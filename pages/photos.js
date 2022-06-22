@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import HeadInfo from "../components/HeadInfo";
+import HeadInfo from "../components/headInfo";
 
 const photos = ({ photos }) => {
   return (

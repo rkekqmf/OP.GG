@@ -1,6 +1,6 @@
 import axios from "axios";
 import styled from "styled-components";
-import ProjectsItem from "../components/projects/ProjectsItem";
+import ProjectsItem from "../components/projects/projectsItem";
 import { DATABASE_ID, TOKEN } from "../config";
 
 const projects = ({ projects }) => {
