@@ -1,82 +1,46 @@
-import React from "react";
-import styled, { keyframes } from "styled-components";
 import Link from "next/link";
+import styled, { keyframes } from "styled-components";
+import SvgController from "../common/svgController";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCopyright,
-  faCircleNodes,
-  faEnvelope,
-  faGamepad,
-} from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faCopyright, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
+
+const MENU_DATA = [{ "": "홈" }, { resume: "이력서" }, { coverLetter: "자기소개서" }, { projects: "프로젝트" }];
+
+const CONTACT_DATA = [
+  { github: "https://github.com/rkekqmf" },
+  { notion: "https://rkekqmf.notion.site/d86c741ccc92419585ce85bc22ca8b87" },
+  { blogger: "https://rkekqmf.tistory.com" },
+  { gmail: "mailto:rkekqmf@gmail.com" },
+  { instagram: "https://www.instagram.com/rkekqmf" },
+  { riotgames: "https://www.op.gg/summoners/kr/%EA%B0%80%EC%9E%A5%EB%94%B0%EB%9C%BB%ED%95%9C%EC%83%89%EB%B8%94%EB%A3%A8" },
+];
+
 const Footer = () => {
   return (
     <Container>
-      <div>
-        <Wave1></Wave1>
-        <Wave2></Wave2>
-        <Wave3></Wave3>
-        <Wave4></Wave4>
-      </div>
+      <Wave1></Wave1>
+      <Wave2></Wave2>
+      <Wave3></Wave3>
+      <Wave4></Wave4>
       <Menu>
-        <li>
-          <Link href={"/"}>
-            <a>
-              <span>홈</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/resume"}>
-            <a>
-              <span>이력서</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/coverLetter"}>
-            <a>
-              <span>자기소개서</span>
-            </a>
-          </Link>
-        </li>
-        <li>
-          <Link href={"/projects"}>
-            <a>
-              <span>프로젝트</span>
-            </a>
-          </Link>
-        </li>
+        {MENU_DATA.map((menu) => (
+          <li key={Object.values(menu)}>
+            <Link href={"/" + Object.keys(menu)}>
+              <a>
+                <span>{Object.values(menu)}</span>
+              </a>
+            </Link>
+          </li>
+        ))}
       </Menu>
       <Contact>
-        <li>
-          <a href="https://github.com/rkekqmf" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-        </li>
-        <li>
-          <a href="mailto:rkekqmf@gmail.com" target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={faEnvelope} />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.instagram.com/rkekqmf/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.op.gg/summoners/kr/%EA%B0%80%EC%9E%A5%EB%94%B0%EB%9C%BB%ED%95%9C%EC%83%89%EB%B8%94%EB%A3%A8"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FontAwesomeIcon icon={faGamepad} />
-          </a>
-        </li>
+        {CONTACT_DATA.map((contact) => (
+          <li key={Object.keys(contact)}>
+            <a href={Object.values(contact)} target="_blank" rel="noreferrer">
+              <SvgController name={Object.keys(contact)[0]} width={27} height={27} fill="#fff" />
+            </a>
+          </li>
+        ))}
       </Contact>
       <Info>
         <li>
@@ -99,7 +63,7 @@ const Container = styled.footer`
   align-items: center;
   flex-direction: column;
   margin-top: 130px;
-  padding: 20px 50px;
+  padding: 15px 50px;
   width: 100%;
   min-height: 100px;
   background: #3586ff;
@@ -114,7 +78,7 @@ const Menu = styled.ul`
   margin: 10px 0;
   a {
     display: inline-block;
-    font-size: 2em;
+    font-size: 1.9em;
     color: #fff;
     transition: 0.5s;
     &:hover {
@@ -125,7 +89,7 @@ const Menu = styled.ul`
 
 const Contact = styled(Menu)`
   a {
-    font-size: 1.5em;
+    font-size: 1em;
     opacity: 0.6;
     &:hover {
       transform: translateY(0);
@@ -135,6 +99,9 @@ const Contact = styled(Menu)`
 `;
 
 const Info = styled.ul`
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
   display: flex;
   column-gap: 10px;
   margin-top: 15px;

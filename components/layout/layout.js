@@ -1,7 +1,7 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import Footer from "./footer";
 import HeadInfo from "./headInfo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
 const Layout = ({ toggleDarkMode, children }) => {
@@ -11,7 +11,7 @@ const Layout = ({ toggleDarkMode, children }) => {
       <Icon>
         <FontAwesomeIcon icon={faLightbulb} onClick={toggleDarkMode} />
       </Icon>
-      <div>{children}</div>
+      {children}
       <Footer />
     </>
   );
@@ -21,7 +21,6 @@ const Icon = styled.i`
   position: absolute;
   top: 20px;
   right: 20px;
-
   svg {
     transition: 0.1s;
     font-size: 2em;

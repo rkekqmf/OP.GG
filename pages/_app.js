@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <ThemeProvider theme={isDarkMode ? darkTheme : lightTheme}>
         <GlobalStyle />
-        <Layout isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}>
+        <Layout toggleDarkMode={toggleDarkMode}>
           <Component {...pageProps} />
         </Layout>
       </ThemeProvider>

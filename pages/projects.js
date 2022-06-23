@@ -6,10 +6,10 @@ import { DATABASE_ID, TOKEN } from "../config";
 const projects = ({ projects }) => {
   return (
     <Container>
-      <div>
+      <Title>
         <h1>프로젝트</h1>
-        <span>(총 : {projects.length}개)</span>
-      </div>
+        <span>( 총 : {projects.length}개 )</span>
+      </Title>
       <ProjectsList>
         {projects.map((project) => (
           <ProjectsItem key={project.id} project={project} />
@@ -24,19 +24,27 @@ const Container = styled.main`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px;
+  margin-top: 65px;
   row-gap: 50px;
-  h1 {
-    display: inline-block;
-  }
 `;
 
+const Title = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  h1 {
+    font-size: 3em;
+  }
+  span {
+    font-size: 1.5em;
+  }
+`;
 const ProjectsList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
-  width: 70vw;
-  gap: 25px;
+  width: 80vw;
+  gap: 40px 60px;
   transition: 0.01s;
 `;
 

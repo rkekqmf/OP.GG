@@ -11,9 +11,9 @@ const HeadInfo = ({ title, keyword, contents }) => {
 };
 
 HeadInfo.defaultProps = {
-  title: "가장따뜻한색블루.GG",
-  keyword: "롤 전적 챔피언 아이템 검색",
-  contents: "롤 전적 검색",
+  title: "포트폴리오-서성용",
+  keyword: "포트폴리오",
+  contents: "포트폴리오 사이트 구현",
 };
 
 export default HeadInfo;
