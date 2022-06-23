@@ -13,14 +13,14 @@ html,
 body {
   background: ${({ theme }) => theme.bgColor};
   display: flex;
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   color: ${({ theme }) => theme.fontColor};
   transition: 0.5s;
 }
 
 #__next {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   padding-bottom: 350px;
 }
