@@ -54,9 +54,11 @@ const ProjectsItem = ({ project }) => {
             </Text>
           </Name>
           <Link>
-            <Text as="a" href={projectGithub} target="_blank" display="flex" gap={10} marginRight={10} fontSize={1.2} cursor="pointer">
-              <SvgController name="github" width={25} height={25} fill={themeContext.fontColor} />
-            </Text>
+            {projectGithub !== undefined && (
+              <Text as="a" href={projectGithub} target="_blank" display="flex" gap={10} marginRight={10} fontSize={1.2} cursor="pointer">
+                <SvgController name="github" width={25} height={25} fill={themeContext.fontColor} />
+              </Text>
+            )}
             <Text as="a" href={projectUrl} target="_blank" display="flex" gap={10} fontSize={1.2} cursor="pointer">
               <SvgController name="notion" width={25} height={25} fill={themeContext.fontColor} />
             </Text>
