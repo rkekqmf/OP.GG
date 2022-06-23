@@ -1,14 +1,14 @@
 import Link from "next/link";
-
 import styled from "styled-components";
 import Animation from "../components/home/animation";
 
-export default function Home() {
+const Home = () => {
   return (
     <Container>
       <Content>
-        <h1>안녕하세요</h1>
-        <h1>포트폴리오입니다</h1>
+        <p>안녕하세요</p>
+        <p>프론트엔드 개발자</p>
+        <p>&quot;서성용&quot; 포트폴리오 입니다.</p>
         <Link href="/projects">
           <a>
             <span>프로젝트 보러가기</span>
@@ -18,7 +18,7 @@ export default function Home() {
       <Animation />
     </Container>
   );
-}
+};
 
 const Container = styled.main`
   display: flex;
@@ -29,7 +29,21 @@ const Container = styled.main`
 const Content = styled.div`
   display: flex;
   flex-direction: column;
+  p {
+    font-size: 2.5em;
+    font-weight: 600;
+  }
+  a {
+    margin-top: 1em;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 1.5em;
+    box-shadow: 0 0 3px 1px ${({ theme }) => theme.shadowColor};
+  }
 `;
+
+export default Home;
 // export const getServerSideProps = async () => {
 //   const res = await fetch(
 //     "https://jsonplaceholder.typicode.com/posts?_start=0&_end=10"

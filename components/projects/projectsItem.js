@@ -113,11 +113,12 @@ const Title = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 const Name = styled.div`
   display: flex;
+  align-items: center;
 `;
 
 const Link = styled(Name)``;
