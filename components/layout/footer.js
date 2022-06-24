@@ -142,12 +142,12 @@ const WaveKeyframes2 = keyframes`
 
 const Wave1 = styled.div`
   position: absolute;
-  top: -100px;
+  top: -3em;
   left: 0;
   width: 100%;
-  height: 100px;
+  height: 3em;
   background: url(wave.png);
-  background-size: 1000px 100px;
+  background-size: 1000px 3em;
   z-index: 1000;
   opacity: 1;
   bottom: 0;
@@ -156,19 +156,19 @@ const Wave1 = styled.div`
 const Wave2 = styled(Wave1)`
   z-index: 999;
   opacity: 0.5;
-  bottom: 10px;
+  bottom: 1em;
   animation: ${WaveKeyframes2} 4s linear infinite;
 `;
 const Wave3 = styled(Wave1)`
   z-index: 998;
   opacity: 0.2;
-  bottom: 15px;
+  bottom: 1.5em;
   animation: ${WaveKeyframes1} 3s linear infinite;
 `;
 const Wave4 = styled(Wave1)`
   z-index: 997;
   opacity: 0.7;
-  bottom: 20px;
+  bottom: 2em;
   animation: ${WaveKeyframes2} 3s linear infinite;
 `;
 export default Footer;

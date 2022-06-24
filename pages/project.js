@@ -24,7 +24,6 @@ const Container = styled.main`
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  margin-top: 65px;
   row-gap: 50px;
 `;
 

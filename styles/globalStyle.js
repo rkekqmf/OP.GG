@@ -22,7 +22,8 @@ body {
 #__next {
   width: 100%;
   min-height: 100vh;
-  padding-bottom: 350px;
+  padding-top: 3.5em;
+  padding-bottom: 15em;
 }
 ul {
   list-style: none;

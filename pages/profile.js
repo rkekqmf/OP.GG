@@ -42,7 +42,6 @@ const Container = styled.main`
   justify-content: center;
   align-items: center;
   column-gap: 5.5em;
-  margin-top: 65px;
 `;
 
 const ImageBox = styled.div`
