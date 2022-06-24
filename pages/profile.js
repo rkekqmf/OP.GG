@@ -5,8 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
-  // const comment =
-  //   "프론트엔드 개발자 서성용 입니다.\n\n경험과 도전 그리고,\n즐거움을 최고의 가치로 생각합니다.\n\n수 차례 많은 실패와 실수,\n그런 경험에서 얻은 교훈을 바탕으로 또 다시 도전합니다.\n\n이러한 과정들 속에서 스스로의 행복과,\n업무능력 향상에 도움되는 즐거움을 찾습니다.";
+  const comment1 = "프론트엔드 개발자 서성용 입니다.";
+  const comment2 =
+    "경험과 도전 그리고,\n즐거움을 최고의 가치로 생각합니다.\n\n수 차례 많은 실패와 실수,\n그런 경험에서 얻은 교훈을 바탕으로 또 다시 도전합니다.\n\n이러한 과정들 속에서 스스로의 행복과,\n업무능력 향상에 도움되는 즐거움을 찾습니다.";
 
   return (
     <Container>
@@ -14,7 +15,7 @@ const Profile = () => {
         <ImageBox>
           <Image src="/증명사진.jpg" width={250} height={250} alt="프로필사진" />
         </ImageBox>
-        <a href="tel:+8210-6336-7941" target="_blank" rel="noreferrer">
+        <a href="tel:+821063367941" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faPhone} />
         </a>
         <a href="mailto:rkekqmf@gmail.com" target="_blank" rel="noreferrer">
@@ -22,22 +23,8 @@ const Profile = () => {
         </a>
       </Contact>
       <Content>
-        <Comment1>프론트엔드 개발자 서성용 입니다.</Comment1>
-        <Comment2>
-          경험과 도전 그리고,
-          <br />
-          즐거움을 최고의 가치로 생각합니다.
-          <br />
-          <br />
-          수 차례 많은 실패와 실수,
-          <br />
-          그런 경험에서 얻은 교훈을 바탕으로 또 다시 도전합니다.
-          <br />
-          <br />
-          이러한 과정들 속에서 스스로의 행복과,
-          <br />
-          업무능력 향상에 도움되는 즐거움을 찾습니다.
-        </Comment2>
+        <Comment1>{comment1}</Comment1>
+        <Comment2>{comment2}</Comment2>
         <a
           href="https://rkekqmf.notion.site/896b6c5d619949f4a430931addbe3dd1"
           target="_blank"
@@ -101,6 +88,7 @@ const Comment1 = styled.p`
 const Comment2 = styled(Comment1)`
   font-weight: 600;
   font-size: 1.5em;
+  white-space: pre;
 `;
 export default Profile;
 
