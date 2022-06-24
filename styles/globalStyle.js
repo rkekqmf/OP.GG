@@ -23,7 +23,7 @@ body {
   width: 100%;
   min-height: 100vh;
   padding-top: 3.5em;
-  padding-bottom: 14em;
+  padding-bottom: 15em;
 }
 ul {
   list-style: none;
