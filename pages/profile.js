@@ -50,6 +50,7 @@ const ImageBox = styled.div`
   border-radius: 50%;
   height: 250px;
   overflow: hidden;
+  box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
 `;
 
 const Contact = styled.div`
@@ -60,7 +61,7 @@ const Contact = styled.div`
     border-radius: 50%;
     width: fit-content;
     font-size: 1.5em;
-    box-shadow: 0 0 3px 1px ${({ theme }) => theme.shadowColor};
+    box-shadow: 0 0 3px 3px ${({ theme }) => theme.shadowColor};
   }
 `;
 const Content = styled.div`
@@ -72,7 +73,7 @@ const Content = styled.div`
     border-radius: 5px;
     width: fit-content;
     font-size: 1.5em;
-    box-shadow: 0 0 3px 1px ${({ theme }) => theme.shadowColor};
+    box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
   }
 `;
 

@@ -50,7 +50,7 @@ const Content = styled.div`
     border-radius: 5px;
     width: fit-content;
     font-size: 1.5em;
-    box-shadow: 0 0 3px 1px ${({ theme }) => theme.shadowColor};
+    box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
   }
 `;
 

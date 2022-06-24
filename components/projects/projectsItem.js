@@ -56,11 +56,28 @@ const ProjectsItem = ({ project }) => {
           </Name>
           <Link>
             {projectGithub !== undefined && (
-              <Text as="a" href={projectGithub} target="_blank" display="flex" gap={10} marginRight={10} fontSize={1.2} cursor="pointer">
+              <Text
+                as="a"
+                href={projectGithub}
+                target="_blank"
+                display="flex"
+                gap={10}
+                marginRight={10}
+                fontSize={1.2}
+                cursor="pointer"
+              >
                 <SvgController name="github" width={25} height={25} fill={themeContext.fontColor} />
               </Text>
             )}
-            <Text as="a" href={projectUrl} target="_blank" display="flex" gap={10} fontSize={1.2} cursor="pointer">
+            <Text
+              as="a"
+              href={projectUrl}
+              target="_blank"
+              display="flex"
+              gap={10}
+              fontSize={1.2}
+              cursor="pointer"
+            >
               <SvgController name="notion" width={25} height={25} fill={themeContext.fontColor} />
             </Text>
           </Link>
@@ -98,7 +115,7 @@ const Container = styled.div`
   transition: 0.5s;
   &:hover {
     transform: scale3d(1.1, 1.1, 1.1);
-    box-shadow: 1px 1px 3px 1px ${({ theme }) => theme.shadowColor};
+    box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
   }
 `;
 
