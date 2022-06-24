@@ -12,6 +12,7 @@ const TAG_COLOR = {
   Axios: "#ae6afc",
   "Notion API": "#7f7f7f",
   "Riot API": "#D32936",
+  Redux: "#ae6afc",
 };
 
 const ProjectsItem = ({ project }) => {
