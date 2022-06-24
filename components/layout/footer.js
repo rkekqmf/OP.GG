@@ -4,7 +4,7 @@ import SvgController from "../common/svgController";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
 
-const MENU_DATA = [{ "": "홈" }, { resume: "이력서" }, { coverLetter: "자기소개서" }, { projects: "프로젝트" }];
+const MENU_DATA = [{ "": "홈" }, { resume: "이력서" }, { projects: "프로젝트" }];
 
 const CONTACT_DATA = [
   { github: "https://github.com/rkekqmf" },
