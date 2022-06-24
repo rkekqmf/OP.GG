@@ -9,11 +9,18 @@ const Home = () => {
         <p>안녕하세요</p>
         <p>프론트엔드 개발자</p>
         <p>&quot;서성용&quot; 포트폴리오 입니다.</p>
-        <Link href="/projects">
-          <a>
-            <span>프로젝트 보러가기</span>
-          </a>
-        </Link>
+        <div>
+          <Link href="/profile">
+            <a>
+              <span>프로필 보러가기</span>
+            </a>
+          </Link>
+          <Link href="/project">
+            <a>
+              <span>프로젝트 보러가기</span>
+            </a>
+          </Link>
+        </div>
       </Content>
       <Animation />
     </Container>
@@ -33,8 +40,12 @@ const Content = styled.div`
     font-size: 2.5em;
     font-weight: 600;
   }
-  a {
+  div {
+    display: flex;
+    column-gap: 1.5em;
     margin-top: 1em;
+  }
+  a {
     padding: 10px 20px;
     border-radius: 5px;
     width: fit-content;
@@ -44,6 +55,7 @@ const Content = styled.div`
 `;
 
 export default Home;
+
 // export const getServerSideProps = async () => {
 //   const res = await fetch(
 //     "https://jsonplaceholder.typicode.com/posts?_start=0&_end=10"

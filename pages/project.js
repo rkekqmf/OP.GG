@@ -3,7 +3,7 @@ import styled from "styled-components";
 import ProjectsItem from "../components/projects/projectsItem";
 import { DATABASE_ID, TOKEN } from "../config";
 
-const projects = ({ projects }) => {
+const Project = ({ projects }) => {
   return (
     <Container>
       <Title>
@@ -48,9 +48,9 @@ const ProjectsList = styled.div`
   transition: 0.01s;
 `;
 
-export default projects;
+export default Project;
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   try {
     const options = {
       method: "POST",

@@ -2,9 +2,9 @@ import Link from "next/link";
 import styled, { keyframes } from "styled-components";
 import SvgController from "../common/svgController";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCopyright, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faCopyright, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
 
-const MENU_DATA = [{ "": "홈" }, { resume: "이력서" }, { projects: "프로젝트" }];
+const MENU_DATA = [{ profile: "프로필" }, { "": "홈" }, { project: "프로젝트" }];
 
 const CONTACT_DATA = [
   { github: "https://github.com/rkekqmf" },
@@ -12,7 +12,10 @@ const CONTACT_DATA = [
   { blogger: "https://rkekqmf.tistory.com" },
   { gmail: "mailto:rkekqmf@gmail.com" },
   { instagram: "https://www.instagram.com/rkekqmf" },
-  { riotgames: "https://www.op.gg/summoners/kr/%EA%B0%80%EC%9E%A5%EB%94%B0%EB%9C%BB%ED%95%9C%EC%83%89%EB%B8%94%EB%A3%A8" },
+  {
+    riotgames:
+      "https://www.op.gg/summoners/kr/%EA%B0%80%EC%9E%A5%EB%94%B0%EB%9C%BB%ED%95%9C%EC%83%89%EB%B8%94%EB%A3%A8",
+  },
 ];
 
 const Footer = () => {
@@ -27,7 +30,11 @@ const Footer = () => {
           <li key={Object.values(menu)}>
             <Link href={"/" + Object.keys(menu)}>
               <a>
-                <span>{Object.values(menu)}</span>
+                {Object.values(menu)[0] === "홈" ? (
+                  <FontAwesomeIcon icon={faHouse} />
+                ) : (
+                  <span>{Object.values(menu)}</span>
+                )}
               </a>
             </Link>
           </li>
