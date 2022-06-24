@@ -21,12 +21,13 @@ body {
 
 #__next {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
   padding-top: 3.5em;
-  padding-bottom: 15em;
+  padding-bottom: 15.5em;
+  width: 100%;
+  min-height: 100vh;
 }
+
 ul {
   list-style: none;
 }

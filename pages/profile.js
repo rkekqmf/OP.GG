@@ -83,13 +83,14 @@ const Comment1 = styled.p`
   font-size: 1.8em;
   letter-spacing: 0.01em;
   word-spacing: 0.1em;
-  line-height: 1.5em;
+  line-height: 1.4em;
 `;
 const Comment2 = styled(Comment1)`
   font-weight: 600;
-  font-size: 1.5em;
+  font-size: 1.3em;
   white-space: pre;
 `;
+
 export default Profile;
 
 // export const getStaticProps = async () => {

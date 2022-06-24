@@ -68,7 +68,6 @@ const Container = styled.footer`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 130px;
   padding: 15px 50px;
   width: 100%;
   min-height: 100px;

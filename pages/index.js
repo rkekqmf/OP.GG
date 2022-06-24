@@ -3,12 +3,12 @@ import styled from "styled-components";
 import Animation from "../components/home/animation";
 
 const Home = () => {
+  const comment = '안녕하세요\n프론트엔드 개발자\n"서성용" 포트폴리오 입니다.';
   return (
     <Container>
+      <Animation />
       <Content>
-        <p>안녕하세요</p>
-        <p>프론트엔드 개발자</p>
-        <p>&quot;서성용&quot; 포트폴리오 입니다.</p>
+        <pre>{comment}</pre>
         <div>
           <Link href="/profile">
             <a>
@@ -22,21 +22,22 @@ const Home = () => {
           </Link>
         </div>
       </Content>
-      <Animation />
     </Container>
   );
 };
 
 const Container = styled.main`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  column-gap: 5em;
 `;
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-  p {
+
+  pre {
     font-size: 2.5em;
     font-weight: 600;
   }
@@ -53,6 +54,27 @@ const Content = styled.div`
     box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
   }
 `;
+
+// 반응형 예제
+// const sizes = {
+//   dektop: 1024,
+//   tabled: 768,
+// };
+
+// const media = Object.keys(sizes).reduce((acc, label) => {
+//   acc[label] = (...args) => css`
+//     @media (max-width: ${sizes[label] / 16}em) {
+//       ${css(...args)};
+//     }
+//   `;
+
+//   return acc;
+// }, {});
+
+// const Box = styled.div`
+//   width: 1024px;
+//   ${media.desktop`width: 768px;`};
+// `;
 
 export default Home;
 
