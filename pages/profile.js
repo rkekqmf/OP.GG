@@ -14,7 +14,7 @@ const Profile = () => {
         <ImageBox>
           <Image src="/증명사진.jpg" width={250} height={250} alt="프로필사진" />
         </ImageBox>
-        <a href="tel:+8210-5934-0321" target="_blank" rel="noreferrer">
+        <a href="tel:+8210-6336-7941" target="_blank" rel="noreferrer">
           <FontAwesomeIcon icon={faPhone} />
         </a>
         <a href="mailto:rkekqmf@gmail.com" target="_blank" rel="noreferrer">
