@@ -10,7 +10,6 @@ const CONTACT_DATA = [
   { github: "https://github.com/rkekqmf" },
   { notion: "https://rkekqmf.notion.site/d86c741ccc92419585ce85bc22ca8b87" },
   { blogger: "https://rkekqmf.tistory.com" },
-  { gmail: "mailto:rkekqmf@gmail.com" },
   { instagram: "https://www.instagram.com/rkekqmf" },
   {
     riotgames:
