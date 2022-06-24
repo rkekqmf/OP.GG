@@ -20,8 +20,10 @@ body {
 }
 
 #__next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  min-height: 100vh;
   padding-top: 3.5em;
   padding-bottom: 15em;
 }
