@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
 const Profile = () => {
-  const comment =
-    "프론트엔드 개발자 서성용 입니다.\n\n경험과 도전 그리고,\n즐거움을 최고의 가치로 생각합니다.\n\n수 차례 많은 실패와 실수,\n그런 경험에서 얻은 교훈을 바탕으로 또 다시 도전합니다.\n\n이러한 과정들 속에서 스스로의 행복과,\n업무능력 향상에 도움되는 즐거움을 찾습니다.";
+  // const comment =
+  //   "프론트엔드 개발자 서성용 입니다.\n\n경험과 도전 그리고,\n즐거움을 최고의 가치로 생각합니다.\n\n수 차례 많은 실패와 실수,\n그런 경험에서 얻은 교훈을 바탕으로 또 다시 도전합니다.\n\n이러한 과정들 속에서 스스로의 행복과,\n업무능력 향상에 도움되는 즐거움을 찾습니다.";
 
   return (
     <Container>
@@ -91,9 +91,15 @@ const Content = styled.div`
 `;
 
 const Comment1 = styled.p`
+  font-family: Nanum Gothic, sans-serif;
+  font-weight: 800;
   font-size: 1.8em;
+  letter-spacing: 0.01em;
+  word-spacing: 0.1em;
+  line-height: 1.5em;
 `;
 const Comment2 = styled(Comment1)`
+  font-weight: 600;
   font-size: 1.5em;
 `;
 export default Profile;
