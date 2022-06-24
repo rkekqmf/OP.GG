@@ -50,7 +50,7 @@ const ImageBox = styled.div`
   border-radius: 50%;
   height: 250px;
   overflow: hidden;
-  box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
+  box-shadow: 0 0 3px 3px ${({ theme }) => theme.shadowColor};
 `;
 
 const Contact = styled.div`
