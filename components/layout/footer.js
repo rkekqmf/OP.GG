@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 import SvgController from "../common/svgController";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faCopyright, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
@@ -61,6 +61,17 @@ const Footer = () => {
     </Container>
   );
 };
+// @media only screen and (max-width: 600px) {
+// }
+// @media only screen and (min-width: 600px) {
+// }
+// @media only screen and (min-width: 768px) {
+// }
+// @media only screen and (min-width: 992px) {
+// }
+// @media only screen and (min-width: 1200px) {
+// }
+
 const Container = styled.footer`
   position: fixed;
   bottom: 0;
@@ -104,7 +115,8 @@ const Contact = styled(Menu)`
 `;
 
 const Info = styled.ul`
-  position: absolute;
+  z-index: 1000;
+  position: fixed;
   bottom: 10px;
   left: 20px;
   display: flex;
@@ -117,13 +129,31 @@ const Info = styled.ul`
   font-weight: 100;
   color: #fff;
   opacity: 0.6;
-
   li {
     display: flex;
-    align-items: center;
-    column-gap: 10px;
+    column-gap: 5px;
   }
+  @media only screen and (max-width: 672px) {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    color: ${({ theme }) => theme.fontColor};
+    opacity: 1;
+  }
+  /* @media only screen and (min-width: 600px) {
+  }
+  @media only screen and (min-width: 768px) {
+    top: -100px;
+    left: 20px;
+  }
+  @media only screen and (min-width: 992px) {
+    bottom: 10px;
+    left: 20px;
+  }
+  @media only screen and (min-width: 1200px) {
+  } */
 `;
+
 const WaveKeyframes1 = keyframes`
 0% {
   background-position-x: 1000px;
@@ -150,24 +180,32 @@ const Wave1 = styled.div`
   z-index: 1000;
   opacity: 1;
   bottom: 0;
-  animation: ${WaveKeyframes1} 4s linear infinite;
+  ${css`
+    animation: ${WaveKeyframes1} 4s linear infinite;
+  `};
 `;
 const Wave2 = styled(Wave1)`
   z-index: 999;
   opacity: 0.5;
   bottom: 1em;
-  animation: ${WaveKeyframes2} 4s linear infinite;
+  ${css`
+    animation: ${WaveKeyframes2} 4s linear infinite;
+  `};
 `;
 const Wave3 = styled(Wave1)`
   z-index: 998;
   opacity: 0.2;
   bottom: 1.5em;
-  animation: ${WaveKeyframes1} 3s linear infinite;
+  ${css`
+    animation: ${WaveKeyframes1} 3s linear infinite;
+  `};
 `;
 const Wave4 = styled(Wave1)`
   z-index: 997;
   opacity: 0.7;
   bottom: 2em;
-  animation: ${WaveKeyframes2} 3s linear infinite;
+  ${css`
+    animation: ${WaveKeyframes2} 3s linear infinite;
+  `};
 `;
 export default Footer;

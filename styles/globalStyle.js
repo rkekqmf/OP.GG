@@ -9,6 +9,9 @@ const GlobalStyle = createGlobalStyle`
   font-family: "Jua", sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
 html,
 body {
   background: ${({ theme }) => theme.bgColor};
@@ -21,8 +24,9 @@ body {
 
 #__next {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  padding-top: 3.5em;
   padding-bottom: 15.5em;
   width: 100%;
   min-height: 100vh;
