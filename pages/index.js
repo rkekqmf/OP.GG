@@ -8,6 +8,7 @@ const Home = () => {
     <Container>
       <Animation />
       <Content>
+        test
         <pre>{comment}</pre>
         <div>
           <Link href="/profile">
