@@ -19,6 +19,7 @@ html {
   min-width: 98vw;
   min-height: 100vh;
   color: ${({ theme }) => theme.fontColor};
+  transition: 0.2s
   }
   
 a {

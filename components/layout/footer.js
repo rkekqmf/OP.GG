@@ -94,15 +94,15 @@ const Contact = styled(Menu)`
 
 const Info = styled.ul`
   position: fixed;
-  top: 2em;
+  top: 1.5em;
   left: 1.5em;
   display: flex;
   column-gap: 1em;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 100;
   color: ${({ theme }) => theme.fontColor};
-  letter-spacing: 0.2rem;
-  opacity: 0.6;
+  letter-spacing: 0.1em;
+  opacity: 0.3;
   z-index: 2;
   span {
     margin-left: 0.5em;
