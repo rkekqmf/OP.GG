@@ -57,8 +57,8 @@ export const ImageBox = styled.div`
   ${({ theme }) => theme.xl`
     margin-top: 0;
     margin-bottom: 5em;
-    width: 20rem;
-    height: 20rem;
+    width: 25rem;
+    height: 25rem;
   `}
 `;
 
