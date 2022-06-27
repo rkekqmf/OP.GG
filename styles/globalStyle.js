@@ -1,44 +1,29 @@
 import { createGlobalStyle } from "styled-components";
+import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Jua", sans-serif;
-}
-
-html {
-  font-size: 62.5%;
-}
-html,
-body {
-  background: ${({ theme }) => theme.bgColor};
-  display: flex;
-  width: 100%;
-  min-height: 100vh;
-  color: ${({ theme }) => theme.fontColor};
-  transition: 0.5s;
-}
-
+${reset}
 #__next {
+  box-sizing: border-box;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding-bottom: 15.5em;
-  width: 100%;
+  padding-bottom: 15.5rem;
+  background: ${({ theme }) => theme.bgColor};
+  min-width: 100vw;
   min-height: 100vh;
+  font-family: "Jua", sans-serif;
+  font-size: 62.5%;
+  color: ${({ theme }) => theme.fontColor};
+  transition: 0.5s;
+  li{
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+  }
 }
-
-ul {
-  list-style: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}`;
+`;
 
 export default GlobalStyle;

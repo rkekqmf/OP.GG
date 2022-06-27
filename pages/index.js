@@ -48,6 +48,7 @@ const Content = styled.div`
     margin-top: 1em;
   }
   a {
+    color: inherit;
     padding: 10px 20px;
     border-radius: 5px;
     width: fit-content;

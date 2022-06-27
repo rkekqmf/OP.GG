@@ -1,7 +1,7 @@
 import axios from "axios";
 import Image from "next/image";
 import styled from "styled-components";
-import * as S from "../components/common/commonStyle";
+import { Container } from "../components/common/commonStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
@@ -15,7 +15,7 @@ const Profile = ({ container }) => {
   return (
     // <S.Container {...containerStyle}>
     //   {children}
-    <S.Container>
+    <Container>
       <Contact>
         <ImageBox>
           <Image src="/증명사진.jpg" layout="fill" objectFit="fill" alt="프로필사진" />
@@ -38,7 +38,7 @@ const Profile = ({ container }) => {
           <span>이력서 보러가기</span>
         </a>
       </Content>
-    </S.Container>
+    </Container>
   );
 };
 /* Extra small devices (phones, 600px and down) */
