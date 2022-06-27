@@ -14,13 +14,11 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 15.5rem;
+  padding-bottom: 23.5vh;
   background: ${({ theme }) => theme.bgColor};
-  min-width: 100vw;
+  min-width: 98vw;
   min-height: 100vh;
   color: ${({ theme }) => theme.fontColor};
-  transition: 0.5s;
   }
   
 a {

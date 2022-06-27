@@ -1,7 +1,7 @@
 import axios from "axios";
 import Image from "next/image";
 import styled from "styled-components";
-import { Container } from "../components/common/commonStyle";
+import { Container } from "../styles/commonStyle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 

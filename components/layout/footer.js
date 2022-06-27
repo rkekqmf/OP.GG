@@ -3,19 +3,7 @@ import styled, { keyframes, css } from "styled-components";
 import SvgController from "../common/svgController";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faCopyright, faCircleNodes } from "@fortawesome/free-solid-svg-icons";
-
-const MENU_DATA = [{ profile: "프로필" }, { "": "홈" }, { project: "프로젝트" }];
-
-const CONTACT_DATA = [
-  { github: "https://github.com/rkekqmf" },
-  { notion: "https://rkekqmf.notion.site/d86c741ccc92419585ce85bc22ca8b87" },
-  { blogger: "https://rkekqmf.tistory.com" },
-  { instagram: "https://www.instagram.com/rkekqmf" },
-  {
-    riotgames:
-      "https://www.op.gg/summoners/kr/%EA%B0%80%EC%9E%A5%EB%94%B0%EB%9C%BB%ED%95%9C%EC%83%89%EB%B8%94%EB%A3%A8",
-  },
-];
+import { MENU_DATA, CONTACT_DATA } from "../../data/layoutData";
 
 const Footer = () => {
   return (
@@ -51,37 +39,22 @@ const Footer = () => {
       <Info>
         <li>
           <FontAwesomeIcon icon={faCircleNodes} />
-          포트폴리오
+          <span>포트폴리오</span>
         </li>
         <li>
           <FontAwesomeIcon icon={faCopyright} />
-          가장따뜻한색블루
+          <span>가장따뜻한색블루</span>
         </li>
       </Info>
     </Container>
   );
 };
-// @media only screen and (max-width: 600px) {
-// }
-// @media only screen and (min-width: 600px) {
-// }
-// @media only screen and (min-width: 768px) {
-// }
-// @media only screen and (min-width: 992px) {
-// }
-// @media only screen and (min-width: 1200px) {
-// }
 
 const Container = styled.footer`
   position: fixed;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 15px 50px;
-  width: 100%;
-  min-height: 100px;
+  padding: 1.5em 0;
+  width: 100vw;
   background: #3586ff;
 `;
 
@@ -90,22 +63,27 @@ const Menu = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: 30px;
-  margin: 10px 0;
+  column-gap: 3.5em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+  transform: translateX(1.2em);
   a {
     display: inline-block;
-    font-size: 1.9em;
+    font-size: 3rem;
     color: #fff;
     transition: 0.5s;
     &:hover {
-      transform: translateY(-10px);
+      transform: translateY(-1rem);
     }
   }
 `;
 
 const Contact = styled(Menu)`
+  margin: 0;
+  column-gap: 3em;
+  transform: translateX(0);
   a {
-    font-size: 1em;
+    font-size: 1rem;
     opacity: 0.6;
     &:hover {
       transform: translateY(0);
@@ -115,58 +93,41 @@ const Contact = styled(Menu)`
 `;
 
 const Info = styled.ul`
-  z-index: 1000;
   position: fixed;
-  bottom: 10px;
-  left: 20px;
+  top: 2em;
+  left: 1.5em;
   display: flex;
-  column-gap: 10px;
-  margin-top: 15px;
-  margin-bottom: 10px;
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 1.1em;
+  column-gap: 1em;
+  font-size: 1.1rem;
   font-weight: 100;
-  color: #fff;
+  color: ${({ theme }) => theme.fontColor};
+  letter-spacing: 0.2rem;
   opacity: 0.6;
-  li {
-    display: flex;
-    column-gap: 5px;
+  z-index: 2;
+  span {
+    margin-left: 0.5em;
   }
-  @media only screen and (max-width: 672px) {
-    position: fixed;
-    top: 10px;
-    left: 20px;
-    color: ${({ theme }) => theme.fontColor};
-    opacity: 1;
-  }
-  /* @media only screen and (min-width: 600px) {
-  }
-  @media only screen and (min-width: 768px) {
-    top: -100px;
-    left: 20px;
-  }
-  @media only screen and (min-width: 992px) {
-    bottom: 10px;
-    left: 20px;
-  }
-  @media only screen and (min-width: 1200px) {
-  } */
+  ${({ theme }) => theme.lg`
+    top:auto;
+    bottom: 1.5em;
+    color: #fff;
+    font-size: 1.5rem;
+  `}
 `;
 
 const WaveKeyframes1 = keyframes`
 0% {
-  background-position-x: 1000px;
+  background-position-x: 100rem;
 }
 100% {
-  background-position-x: 0px;
+  background-position-x: 0;
 }`;
 const WaveKeyframes2 = keyframes`
 0% {
   background-position-x: 0;
 }
 100% {
-  background-position-x: 1000px;
+  background-position-x: 100rem;
 }`;
 
 const Wave1 = styled.div`
@@ -176,7 +137,7 @@ const Wave1 = styled.div`
   width: 100%;
   height: 3em;
   background: url(wave.png);
-  background-size: 1000px 3em;
+  background-size: 100rem 3em;
   z-index: 1000;
   opacity: 1;
   bottom: 0;

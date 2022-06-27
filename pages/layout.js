@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Footer from "./footer";
-import HeadInfo from "./headInfo";
+import Footer from "../components/layout/footer";
+import HeadInfo from "../components/layout/headInfo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 
@@ -19,12 +19,11 @@ const Layout = ({ toggleDarkMode, children }) => {
 
 const Icon = styled.i`
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 2em;
+  right: 2em;
   svg {
-    transition: 0.1s;
-    font-size: 2em;
-    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+    font-size: 3rem;
+    filter: drop-shadow(0 0 0.5rem #fff) drop-shadow(0 0 1rem #fff) drop-shadow(0 0 1.5rem #fff);
     &:hover {
       cursor: pointer;
     }
