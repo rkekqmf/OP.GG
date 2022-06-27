@@ -25,10 +25,9 @@ const ProjectsItem = ({ project }) => {
   const projectDescription = project.properties.description.rich_text[0].plain_text;
   const projectCategory = project.properties.category.rich_text[0].plain_text;
   const projectGithub = project.properties.github.rich_text[0]?.plain_text;
-  const projectUrl = project.url;
+  const projectUrl = project.url.substring(21);
   const projectStart = project.properties.period.date.start;
   const projectEnd = project.properties.period.date.end;
-
   const getPeriod = (start, end) => {
     if (end === null) return "진행중";
 
@@ -70,7 +69,7 @@ const ProjectsItem = ({ project }) => {
             )}
             <Text
               as="a"
-              href={projectUrl}
+              href={"https://rkekqmf.notion.site" + projectUrl}
               target="_blank"
               rel="noreferrer"
               fontSize={1.5}
