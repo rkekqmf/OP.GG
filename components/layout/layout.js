@@ -24,8 +24,7 @@ const Icon = styled.i`
   svg {
     transition: 0.1s;
     font-size: 2em;
-    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff)
-      drop-shadow(0 0 15px #fff);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
     &:hover {
       cursor: pointer;
     }

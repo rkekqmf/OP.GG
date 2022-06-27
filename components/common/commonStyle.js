@@ -22,7 +22,7 @@ export const Container = styled.main`
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
   column-gap: ${({ columnGap }) => columnGap};
-  transition: ${({ transition }) => transition};
+  /* transition: ${({ transition }) => transition}; */
   color: ${({ color }) => color};
   margin-top: 4rem;
   @media only screen and (min-width: 992px) {

@@ -28,7 +28,6 @@ const ProjectsItem = ({ project }) => {
   const projectUrl = project.url;
   const projectStart = project.properties.period.date.start;
   const projectEnd = project.properties.period.date.end;
-  console.log(projectGithub);
   const getPeriod = (start, end) => {
     if (end === null) return "진행중";
 

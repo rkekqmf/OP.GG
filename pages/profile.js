@@ -67,7 +67,6 @@ const ImageBox = styled.div`
   border-radius: 50rem;
   overflow: hidden;
   box-shadow: 0 0 3px 3px ${({ theme }) => theme.shadowColor};
-  transition: 0.5s;
   @media only screen and (max-width: 600px) {
     width: 10rem;
     height: 10rem;
@@ -96,7 +95,6 @@ const Contact = styled.div`
     border-radius: 50%;
     width: fit-content;
     box-shadow: 0 0 3px 3px ${({ theme }) => theme.shadowColor};
-    transition: 0.5s;
     @media only screen and (max-width: 600px) {
       font-size: 1rem;
       padding: 0.5rem 0.5rem;
@@ -128,7 +126,6 @@ const Content = styled.div`
     border-radius: 5px;
     width: fit-content;
     box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
-    transition: 0.5s;
     @media only screen and (max-width: 600px) {
       font-size: 1.5rem;
       padding: 5px 10px;
@@ -151,7 +148,6 @@ const Comment1 = styled.p`
   letter-spacing: 0.01em;
   word-spacing: 0.1em;
   line-height: 1.4em;
-  transition: 0.5s;
   @media only screen and (max-width: 600px) {
     font-size: 2rem;
   }
@@ -165,7 +161,6 @@ const Comment1 = styled.p`
 const Comment2 = styled(Comment1)`
   font-weight: 600;
   font-size: 1.3em;
-  transition: 0.5s;
   white-space: pre-wrap;
   @media only screen and (max-width: 600px) {
     font-size: 1.2rem;

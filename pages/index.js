@@ -4,11 +4,11 @@ import Animation from "../components/home/animation";
 
 const Home = () => {
   const comment = '안녕하세요\n프론트엔드 개발자\n"서성용" 포트폴리오 입니다.';
+
   return (
     <Container>
       <Animation />
       <Content>
-        test
         <pre>{comment}</pre>
         <div>
           <Link href="/profile">
@@ -39,7 +39,7 @@ const Content = styled.div`
   flex-direction: column;
 
   pre {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     font-weight: 600;
   }
   div {
@@ -48,7 +48,6 @@ const Content = styled.div`
     margin-top: 1em;
   }
   a {
-    color: inherit;
     padding: 10px 20px;
     border-radius: 5px;
     width: fit-content;

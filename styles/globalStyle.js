@@ -3,6 +3,12 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
 ${reset}
+
+html {
+  font-family: "Jua", sans-serif;
+  font-size: 62.5%;
+}
+
 #__next {
   box-sizing: border-box;
   display: flex;
@@ -13,17 +19,14 @@ ${reset}
   background: ${({ theme }) => theme.bgColor};
   min-width: 100vw;
   min-height: 100vh;
-  font-family: "Jua", sans-serif;
-  font-size: 62.5%;
   color: ${({ theme }) => theme.fontColor};
   transition: 0.5s;
-  li{
-    list-style: none;
   }
-  a{
+  
+a {
+    color:inherit;
     text-decoration: none;
   }
-}
 `;
 
 export default GlobalStyle;
