@@ -28,6 +28,7 @@ const ProjectsItem = ({ project }) => {
   const projectUrl = project.url;
   const projectStart = project.properties.period.date.start;
   const projectEnd = project.properties.period.date.end;
+
   const getPeriod = (start, end) => {
     if (end === null) return "진행중";
 
@@ -46,10 +47,10 @@ const ProjectsItem = ({ project }) => {
       <Property>
         <Title>
           <Name>
-            <Text fontSize={1.5} marginRight={5}>
+            <Text fontSize={2.2} marginRight={0.5}>
               {projectIcon}
             </Text>
-            <Text fontWeight={800} fontSize={1.5}>
+            <Text fontSize={2.2} fontWeight={800} opacity={0.8}>
               {projectTitle + " (" + getPeriod(projectStart, projectEnd) + ")"}
             </Text>
           </Name>
@@ -59,44 +60,42 @@ const ProjectsItem = ({ project }) => {
                 as="a"
                 href={projectGithub}
                 target="_blank"
-                display="flex"
-                gap={10}
-                marginRight={10}
-                fontSize={1.2}
+                rel="noreferrer"
+                marginRight={1}
+                fontSize={1.5}
                 cursor="pointer"
               >
-                <SvgController name="github" width={25} height={25} fill={themeContext.fontColor} />
+                <SvgController name="github" width={30} height={30} fill={themeContext.fontColor} />
               </Text>
             )}
             <Text
               as="a"
               href={projectUrl}
               target="_blank"
-              display="flex"
-              gap={10}
-              fontSize={1.2}
+              rel="noreferrer"
+              fontSize={1.5}
               cursor="pointer"
             >
-              <SvgController name="notion" width={25} height={25} fill={themeContext.fontColor} />
+              <SvgController name="notion" width={30} height={30} fill={themeContext.fontColor} />
             </Text>
           </Link>
         </Title>
-        <Text fontWeight={700} fontSize={1.2}>
+        <Text fontWeight={700} fontSize={1.8}>
           {projectCategory}
         </Text>
-        <Text fontWeight={400} fontSize={1.1} marginTop={10} marginBottom={10}>
+        <Text fontWeight={400} fontSize={1.6} marginTop={1} marginBottom={1} lineHeight={1.5}>
           {projectDescription}
         </Text>
         {projectTag.map((tag) => (
           <Text
             key={tag.id}
             display="inline-block"
-            marginRight={10}
-            marginTop={10}
-            padding={"3px 10px"}
+            marginRight={1}
+            marginTop={1}
+            padding={"0.3em 1em"}
             color={TAG_COLOR[tag.name]}
             fontWeight={700}
-            fontSize={0.9}
+            fontSize={1.5}
             boxShadow={"0 0 3px 1px" + themeContext.shadowColor}
           >
             {tag.name}
@@ -113,26 +112,35 @@ const Container = styled.div`
   overflow: hidden;
   transition: 0.5s;
   &:hover {
+    transform: none;
+    box-shadow: none;
+    ${({ theme }) => theme.lg`
     transform: scale3d(1.1, 1.1, 1.1);
     box-shadow: 0 0 3px 2px ${({ theme }) => theme.shadowColor};
+  `}
   }
 `;
 
 const ImageBox = styled.div`
   position: relative;
   width: 100%;
-  height: 250px;
+  height: 30vh;
 `;
 
 const Property = styled.div`
-  padding: 15px 12px 5px 12px;
+  padding: 2em 1.3em;
 `;
 
 const Title = styled.div`
   display: flex;
+  flex-direction: column;
+  row-gap: 3em;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 3em;
+  ${({ theme }) => theme.sm`
+  flex-direction: row;
+  `}
 `;
 
 const Name = styled.div`
@@ -144,10 +152,10 @@ const Link = styled(Name)``;
 
 const Text = styled.p`
   display: ${({ display }) => display};
-  column-gap: ${({ gap }) => gap}px;
-  margin-top: ${({ marginTop }) => marginTop}px;
-  margin-right: ${({ marginRight }) => marginRight}px;
-  margin-bottom: ${({ marginBottom }) => marginBottom}px;
+  column-gap: ${({ gap }) => gap}em;
+  margin-top: ${({ marginTop }) => marginTop}em;
+  margin-right: ${({ marginRight }) => marginRight}em;
+  margin-bottom: ${({ marginBottom }) => marginBottom}em;
   padding: ${({ padding }) => padding};
   border-radius: 5px;
   box-shadow: ${({ boxShadow }) => boxShadow};
@@ -155,8 +163,11 @@ const Text = styled.p`
   width: fit-content;
   font-family: Nanum Gothic, sans-serif;
   font-weight: ${({ fontWeight }) => fontWeight};
-  font-size: ${({ fontSize }) => fontSize}em;
+  font-size: ${({ fontSize }) => fontSize}rem;
   color: ${({ color }) => color};
+  word-spacing: 0.05em;
+  letter-spacing: 0.02em;
+  line-height: ${({ lineHeight }) => lineHeight}em;
   &:hover {
     cursor: ${({ cursor }) => cursor};
   }

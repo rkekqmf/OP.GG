@@ -21,30 +21,49 @@ const Project = ({ projects }) => {
 
 const Container = styled.main`
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  flex-direction: column;
-  row-gap: 50px;
+  row-gap: 8em;
+  margin-top: 10em;
 `;
 
 const Title = styled.div`
   display: flex;
+  flex-direction: column;
+  row-gap: 1em;
   align-items: center;
-  column-gap: 20px;
+  transform: translateX(0);
+
+  ${({ theme }) => theme.lg`
+    flex-direction: row;
+    column-gap: 2em;
+    transform: translateX(5em);  
+  `}
+
   h1 {
-    font-size: 3em;
+    font-size: 5rem;
+    margin-top: 1em;
+    ${({ theme }) => theme.lg`
+    margin-top: 0;
+  `}
   }
+
   span {
-    font-size: 1.5em;
+    font-size: 2.5rem;
+    opacity: 0.8;
   }
 `;
+
 const ProjectsList = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
-  width: 80vw;
-  gap: 40px 60px;
-  transition: 0.01s;
+  width: 70%;
+  gap: 4em 6em;
+  ${({ theme }) => theme.sm`
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));  
+  `}
 `;
 
 export default Project;
